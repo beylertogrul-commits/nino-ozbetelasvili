@@ -11,16 +11,17 @@ body {
 /* Naviqasiya menyusu */
 header {
   background: linear-gradient(180deg, #1c1c1c, #2b2b2b);
-  border-top: 3px solid #FFD700;      /* Üst qızılı xətt */
-  border-bottom: 3px solid #FFD700;   /* Alt qızılı xətt */
-  padding: 4px 0;                     /* Dəftər xətti kimi incə boşluq */
+  border-top: 3px solid #FFD700;
+  border-bottom: 3px solid #FFD700;
+  padding: 6px 0; /* yazıya yaxın, incə panel */
   text-align: center;
   color: #FFD700;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-  width: 100vw;
-  position: relative;
-  z-index: 100;
+  width: 70%;          /* ekranın yalnız 70%-ni tutsun */
+  margin: 0 auto;      /* ortada yerləşsin */
+  border-radius: 8px;  /* kənarlar bir az yumrulansın */
 }
+
 
 
 nav a {
