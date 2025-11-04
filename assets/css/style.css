@@ -10,15 +10,16 @@ body {
 
 /* Naviqasiya menyusu */
 header {
-  background: linear-gradient(180deg, #1f1f1f, #2b2b2b);
-  border-top: 4px solid #FFD700;     /* üst qızılı xətt */
-  border-bottom: 4px solid #FFD700;  /* alt qızılı xətt */
-  padding: 25px 0;
+  background: linear-gradient(180deg, #1c1c1c, #2b2b2b);
+  border-top: 3px solid #FFD700;      /* Üst qızılı xətt */
+  border-bottom: 3px solid #FFD700;   /* Alt qızılı xətt */
+  padding: 4px 0;                     /* Dəftər xətti kimi incə boşluq */
   text-align: center;
   color: #FFD700;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  width: 100vw;
   position: relative;
-  z-index: 10;
+  z-index: 100;
 }
 
 
