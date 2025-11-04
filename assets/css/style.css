@@ -7,8 +7,6 @@ body {
     padding: 0;
 }
 
-
-
 /* Naviqasiya menyusu */
 header {
   background-color: #2d2d2d;
@@ -40,7 +38,7 @@ main {
 
 /* Başlıqlar */
 h1, h2 {
-  color: #333;
+  color: #FFD700;
 }
 
 /* Altlıq */
@@ -50,4 +48,18 @@ footer {
   text-align: center;
   padding: 20px 0;
   margin-top: 30px;
+}
+
+/* Button-lar üçün vurğu rəngi */
+button {
+  background-color: #FFD700;
+  color: #2A6F97; /* mətn oxunaqlı olsun */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e6c200; /* biraz tünd qızılı hover */
 }
