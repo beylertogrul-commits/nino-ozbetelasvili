@@ -9,21 +9,21 @@ body {
 
 /* Naviqasiya menyusu */
 header {
-  background-color: #2d2d2d;
-  color: white;
+  ackground-color: #2d2d2d; /* qara panel */
   padding: 15px 0;
-  text-align: center;
+  text-align: center; /* mərkəzləşdirilmiş */
 }
 
 nav a {
-  color: white;
+  color: #FFD700; /* qızılı */
   text-decoration: none;
   margin: 0 15px;
   font-weight: bold;
+  text-shadow: 0 0 5px #FFD700; /* parıltı effekti */
 }
 
 nav a:hover {
-  color: #ffd700;
+  color: #fff; /* hover zamanı ağ */
 }
 
 /* Əsas bölmə */
