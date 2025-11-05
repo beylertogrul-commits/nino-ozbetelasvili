@@ -123,3 +123,20 @@ button:hover {
   height: 100%;
   object-fit: cover; /* Loqonu dairəyə uyğun yerləşdirir */
 }
+/* ====== Loqo üçün əlavə etdiyimiz hissə ====== */
+.logo-container {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;  /* Dairəvi forma */
+  overflow: hidden;    /* Şəkilin dairədən çıxmaması üçün */
+  background: none;    /* Arxa fonu silmək üçün */
+  position: absolute;  /* Yerini təyin etmək üçün */
+  top: 20px;           /* Üstdən məsafə */
+  left: 20px;          /* Soldan məsafə */
+}
+
+.logo-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* Loqonu dairəyə uyğunlaşdırır */
+}
