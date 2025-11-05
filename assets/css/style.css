@@ -110,3 +110,16 @@ button {
 button:hover {
   background-color: #e6c200;
 }
+.logo-container {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%; /* Dairəvi forma */
+  overflow: hidden;   /* Şəkilin dairədən çıxmaması üçün */
+  background: none;   /* Arxa fonu silmək üçün */
+}
+
+.logo-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Loqonu dairəyə uyğun yerləşdirir */
+}
