@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nino Özbetelaşvili</title>
 
-  <!-- ✅ Font Awesome ikonlar üçün etibarlı bağlantı -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <!-- ✅ Font Awesome ikonlar üçün -->
+  <script src="https://kit.fontawesome.com/4b0b43f96f.js" crossorigin="anonymous"></script>
 
   <style>
     body {
@@ -76,23 +76,30 @@
     }
 
     footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       background: linear-gradient(180deg, #1e1e1e, #000);
       border-top: 2px solid #FFD700;
       color: #FFD700;
-      text-align: center;
-      padding: 15px 0;
+      padding: 15px 40px;
       font-size: 0.95em;
       box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.4);
+      flex-wrap: wrap;
+    }
+
+    footer p {
+      margin: 0;
     }
 
     /* ✅ Sosial media ikonları */
     .social-icons {
-      margin-top: 10px;
+      display: flex;
+      gap: 20px;
     }
 
     .social-icons a {
       color: #FFD700;
-      margin: 0 10px;
       font-size: 1.6em;
       text-decoration: none;
       transition: 0.3s;
@@ -101,6 +108,16 @@
     .social-icons a:hover {
       color: #fff;
       text-shadow: 0 0 12px #FFD700;
+    }
+
+    @media (max-width: 700px) {
+      footer {
+        flex-direction: column;
+        text-align: center;
+      }
+      .social-icons {
+        margin-top: 10px;
+      }
     }
   </style>
 </head>
@@ -129,9 +146,9 @@
 
   <main></main>
 
-  <!-- ✅ Alt panel -->
+  <!-- ✅ Alt panel (ikonlar sağda) -->
   <footer>
-    © 2025 Nino Özbetelaşvili. Bütün hüquqlar qorunur.
+    <p>© 2025 Nino Özbetelaşvili. Bütün hüquqlar qorunur.</p>
     <div class="social-icons">
       <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
       <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
