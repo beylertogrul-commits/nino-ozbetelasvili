@@ -23,7 +23,7 @@
       backdrop-filter: blur(4px);
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 2;
     }
 
     .logo {
@@ -37,15 +37,6 @@
       width: 85px;
       border-radius: 50%;
       object-fit: cover;
-      background: transparent;
-      border: none;
-      box-shadow: none;
-    }
-
-    .logo-text {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
     }
 
     .logo-text h1 {
@@ -53,7 +44,6 @@
       font-size: 1.6em;
       margin: 0;
       text-shadow: 0 0 10px #FFD700;
-      line-height: 1.1em;
     }
 
     .logo-text p {
@@ -61,7 +51,6 @@
       font-size: 0.95em;
       color: #fff;
       opacity: 0.9;
-      line-height: 1.2em;
     }
 
     nav a {
@@ -75,7 +64,6 @@
 
     nav a:hover {
       color: #fff;
-      text-shadow: 0 0 12px #FFD700;
     }
 
     main {
@@ -94,29 +82,22 @@
       padding: 12px 0;
       font-size: 0.95em;
       box-shadow: 0 -2px 8px rgba(0,0,0,0.4);
-      z-index: 5;
+      z-index: 2;
     }
 
-    /* 🔹 Sağ tərəfdə dumanlı estetik şəkil */
+    /* ✅ Sağ tərəfdə sabit şəkil */
     .side-image {
       position: fixed;
       top: 0;
       right: 0;
-      width: 320px;
+      width: 300px;
       height: 100vh;
-      background-image: url("assets/front.png"); /* ✅ DÜZGÜN YOL */
+      background: url("assets/front.png") center right no-repeat;
       background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center right;
-      filter: blur(2.5px) brightness(0.95);
-      opacity: 0.8;
+      opacity: 0.7;
+      filter: brightness(0.9) blur(2px);
       z-index: 0;
       pointer-events: none;
-    }
-
-    header, main, footer {
-      position: relative;
-      z-index: 1;
     }
 
     @media (max-width: 768px) {
@@ -154,6 +135,7 @@
     © 2025 Nino Özbetelaşvili. Bütün hüquqlar qorunur.
   </footer>
 
+  <!-- 🔹 Sağ tərəf şəkli -->
   <div class="side-image"></div>
 
 </body>
