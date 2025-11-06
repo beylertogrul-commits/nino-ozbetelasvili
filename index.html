@@ -82,7 +82,7 @@
       min-height: 80vh;
     }
 
-    /* ✅ Alt panel (ikonlar görünsün deyə z-index əlavə edildi) */
+    /* ✅ Alt panel */
     footer {
       display: flex;
       justify-content: space-between;
@@ -105,7 +105,7 @@
     /* ✅ Sosial media ikonları */
     .social-icons {
       display: flex;
-      gap: 20px;
+      gap: 25px;
       position: relative;
       z-index: 10000;
     }
@@ -122,6 +122,11 @@
       text-shadow: 0 0 15px #FFD700;
       transform: scale(1.2);
     }
+
+    /* Rəng dəyişməsi effekti */
+    .social-icons a.facebook:hover { color: #1877F2; }
+    .social-icons a.instagram:hover { color: #E4405F; }
+    .social-icons a.linkedin:hover { color: #0A66C2; }
 
     @media (max-width: 700px) {
       footer {
@@ -159,13 +164,19 @@
 
   <main></main>
 
-  <!-- ✅ Alt paneldə ikonlar sağda -->
+  <!-- ✅ Alt panel + sosial ikonlar -->
   <footer>
     <p>© 2025 Nino Özbetelaşvili. Bütün hüquqlar qorunur.</p>
     <div class="social-icons">
-      <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-      <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-      <a href="https://linkedin.com" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://www.facebook.com/share/17VeKzPxvn/?mibextid=wwXIfr" class="facebook" target="_blank" title="Facebook">
+        <i class="fa-brands fa-facebook-f"></i>
+      </a>
+      <a href="https://www.instagram.com/ninoozbetelasvili_/" class="instagram" target="_blank" title="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/nino-ozbet-a27512390/" class="linkedin" target="_blank" title="LinkedIn">
+        <i class="fa-brands fa-linkedin-in"></i>
+      </a>
     </div>
   </footer>
 </body>
