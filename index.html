@@ -70,10 +70,16 @@
       text-shadow: 0 0 12px #FFD700;
     }
 
-    /* ✅ ŞƏKİL */
+    main {
+      min-height: 200vh; /* Scroll effekti üçün */
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ✅ ŞƏKİL DİZAYNI */
     .side-image {
       position: fixed;
-      right: 0;
+      right: -20px;
       bottom: 0;
       width: 50vw;
       height: auto;
@@ -88,7 +94,7 @@
       width: 100%;
       height: auto;
       object-fit: contain;
-      transform: translateY(0);
+      transform: translateY(-80px); /* baş hissəni yuxarı qaldırır */
     }
 
     footer {
@@ -130,7 +136,7 @@
     </nav>
   </header>
 
-  <!-- ✅ Şəkil -->
+  <!-- ✅ ŞƏKİL -->
   <div class="side-image">
     <img src="assets/images/front.png" alt="Nino Özbetelaşvili">
   </div>
