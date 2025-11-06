@@ -17,7 +17,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 15px 60px;
+      padding: 10px 60px;
       background: rgba(106, 166, 208, 0.4);
       backdrop-filter: blur(4px);
       border-bottom: 2px solid #FFD700;
@@ -26,13 +26,102 @@
       z-index: 1000;
     }
 
-    /* 🔹 Loqo bölməsi */
+    /* 🔹 Loqo və yazı yan-yana və ortalanmış */
     .logo {
       display: flex;
-      align-items: center;   /* Loqo və yazını ortalayır */
+      align-items: center; 
       gap: 15px;
     }
 
     /* 🔹 Loqo şəkli */
     .logo img {
-      width: 65px
+      width: 55px;        /* Yazı boyuna uyğun ölçü */
+      height: 55px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: transparent;
+      border: none;        /* Sarı dairə yoxdur */
+      box-shadow: none;    /* Kölgə yoxdur */
+    }
+
+    /* 🔹 Yazılar */
+    .logo-text h1 {
+      color: #FFD700;
+      font-size: 1.6em;
+      margin: 0;
+      line-height: 1em;
+      text-shadow: 0 0 8px #FFD700;
+    }
+
+    .logo-text p {
+      margin: 2px 0 0 0;
+      font-size: 0.95em;
+      color: #fff;
+      opacity: 0.9;
+    }
+
+    nav a {
+      color: #FFD700;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      text-shadow: 0 0 6px #FFD700;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #fff;
+      text-shadow: 0 0 12px #FFD700;
+    }
+
+    main {
+      min-height: 80vh;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: linear-gradient(180deg, #1e1e1e, #000);
+      border-top: 2px solid #FFD700;
+      color: #FFD700;
+      text-align: center;
+      padding: 12px 0;
+      font-size: 0.95em;
+      box-shadow: 0 -2px 8px rgba(0,0,0,0.4);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Naviqasiya -->
+  <header>
+    <div class="logo">
+      <!-- ✅ Şəffaf loqo -->
+      <img src="assets/images/ninologo.png" alt="Logo">
+      <div class="logo-text">
+        <h1>Nino Özbetelaşvili</h1>
+        <p>Beynəlxalq təlimçi və Art terapiya mütəxəssisi</p>
+      </div>
+    </div>
+
+    <nav>
+      <a href="index.html">Ana səhifə</a>
+      <a href="about.html">Haqqında</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="certificates.html">Sertifikatlar</a>
+      <a href="services.html">Xidmətlər</a>
+      <a href="gallery.html">Qalereya</a>
+      <a href="contact.html">Əlaqə</a>
+    </nav>
+  </header>
+
+  <main></main>
+
+  <footer>
+    © 2025 Nino Özbetelaşvili. Bütün hüquqlar qorunur.
+  </footer>
+
+</body>
+</html>
