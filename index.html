@@ -5,18 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nino Özbetelaşvili</title>
   <style>
-    body {
+    * {
       margin: 0;
       padding: 0;
-      font-family: 'Lato', Arial, sans-serif;
-      background: linear-gradient(135deg, #2A6F97, #6FAED9);
-      color: #f5f5f5;
-      overflow-x: hidden;
-      position: relative;
-      min-height: 100vh;
+      box-sizing: border-box;
     }
 
-    /* Header */
+    body {
+      font-family: 'Lato', Arial, sans-serif;
+      background: linear-gradient(135deg, #2A6F97, #6FAED9);
+      color: #fff;
+      min-height: 200vh; /* scroll üçün */
+      overflow-x: hidden;
+      position: relative;
+    }
+
     header {
       display: flex;
       align-items: center;
@@ -65,4 +68,62 @@
       transition: all 0.3s ease;
     }
 
-    na
+    nav a:hover {
+      color: #fff;
+      text-shadow: 0 0 12px #FFD700;
+    }
+
+    /* ✅ Sabit fon şəklini əlavə edirik */
+    body::before {
+      content: "";
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      width: 50vw;
+      background-image: url("assets/images/front.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: right calc(50% - 60px); /* gözlər menyunun altına düşür */
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    main {
+      position: relative;
+      z-index: 1;
+      padding: 100px 60px 160px;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: linear-gradient(180deg, #1e1e1e, #000);
+      border-top: 2px solid #FFD700;
+      color: #FFD700;
+      text-align: center;
+      padding: 12px 0;
+      font-size: 0.95em;
+      box-shadow: 0 -2px 8px rgba(0,0,0,0.4);
+      z-index: 5;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="assets/images/ninologo.png" alt="Logo">
+      <div class="logo-text">
+        <h1>Nino Özbetelaşvili</h1>
+        <p>Beynəlxalq təlimçi və Art terapiya mütəxəssisi</p>
+      </div>
+    </div>
+
+    <nav>
+      <a href="index.html">Ana səhifə</a>
+      <a href="about.html">Haqqında</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="certificates.html">Sertifi
