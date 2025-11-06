@@ -18,7 +18,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 15px 60px;
-      background: rgba(106, 166, 208, 0.4); /* Mind Blue şəffaf */
+      background: rgba(106, 166, 208, 0.4);
       backdrop-filter: blur(4px);
       border-bottom: 2px solid #FFD700;
       position: sticky;
@@ -32,21 +32,27 @@
       gap: 15px;
     }
 
+    /* ✅ Loqo üslubu */
     .logo img {
-      height: 70px;
-      width: 70px;
+      width: 85px;
+      height: 85px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: transparent;
+      border: 2px solid #FFD700;
+      box-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
     }
 
     .logo-text h1 {
       color: #FFD700;
-      font-size: 1.6em;
+      font-size: 1.8em;
       margin: 0;
       text-shadow: 0 0 10px #FFD700;
     }
 
     .logo-text p {
       margin: 4px 0 0 0;
-      font-size: 0.95em;
+      font-size: 1em;
       color: #fff;
       opacity: 0.9;
     }
@@ -89,7 +95,8 @@
   <!-- Naviqasiya -->
   <header>
     <div class="logo">
-       <img src="assets/images/ninologo.png" alt="Logo">
+      <!-- ✅ Loqo yolu DÜZGÜN -->
+      <img src="assets/images/ninologo.png" alt="Logo">
       <div class="logo-text">
         <h1>Nino Özbetelaşvili</h1>
         <p>Beynəlxalq təlimçi və Art terapiya mütəxəssisi</p>
