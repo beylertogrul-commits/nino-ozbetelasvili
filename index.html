@@ -26,22 +26,23 @@
       z-index: 1000;
     }
 
-    /* 🔹 Loqo və yazı yan-yana və ortalanmış */
+    /* 🔹 Loqo və yazı yan-yana və tam ortada */
     .logo {
       display: flex;
-      align-items: center; 
-      gap: 15px;
+      align-items: center;
+      gap: 12px;
     }
 
-    /* 🔹 Loqo şəkli */
+    /* 🔹 Loqo şəkli — yazı hündürlüyünə tam uyğun */
     .logo img {
-      width: 55px;        /* Yazı boyuna uyğun ölçü */
-      height: 55px;
+      width: 48px;     /* dəqiq balanslı ölçü */
+      height: 48px;
       border-radius: 50%;
       object-fit: cover;
       background: transparent;
-      border: none;        /* Sarı dairə yoxdur */
-      box-shadow: none;    /* Kölgə yoxdur */
+      border: none;
+      box-shadow: none;
+      vertical-align: middle;
     }
 
     /* 🔹 Yazılar */
@@ -49,8 +50,8 @@
       color: #FFD700;
       font-size: 1.6em;
       margin: 0;
-      line-height: 1em;
-      text-shadow: 0 0 8px #FFD700;
+      line-height: 1.1em;
+      text-shadow: 0 0 10px #FFD700;
     }
 
     .logo-text p {
@@ -98,7 +99,6 @@
   <!-- Naviqasiya -->
   <header>
     <div class="logo">
-      <!-- ✅ Şəffaf loqo -->
       <img src="assets/images/ninologo.png" alt="Logo">
       <div class="logo-text">
         <h1>Nino Özbetelaşvili</h1>
