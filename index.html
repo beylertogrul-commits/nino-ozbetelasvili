@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nino Özbetelaşvili</title>
 
-  <!-- ✅ Font Awesome (sabit CDN versiyası) -->
+  <!-- ✅ Font Awesome ikonlar üçün -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -21,6 +21,7 @@
       font-family: 'Lato', Arial, sans-serif;
       margin: 0;
       padding: 0;
+      overflow-x: hidden;
     }
 
     header {
@@ -81,6 +82,7 @@
       min-height: 80vh;
     }
 
+    /* ✅ Alt panel (ikonlar görünsün deyə z-index əlavə edildi) */
     footer {
       display: flex;
       justify-content: space-between;
@@ -92,6 +94,8 @@
       font-size: 0.95em;
       box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.4);
       flex-wrap: wrap;
+      position: relative;
+      z-index: 9999;
     }
 
     footer p {
@@ -102,18 +106,21 @@
     .social-icons {
       display: flex;
       gap: 20px;
+      position: relative;
+      z-index: 10000;
     }
 
     .social-icons a {
       color: #FFD700;
-      font-size: 1.6em;
+      font-size: 1.7em;
       text-decoration: none;
-      transition: 0.3s;
+      transition: transform 0.3s ease, color 0.3s ease;
     }
 
     .social-icons a:hover {
       color: #fff;
-      text-shadow: 0 0 12px #FFD700;
+      text-shadow: 0 0 15px #FFD700;
+      transform: scale(1.2);
     }
 
     @media (max-width: 700px) {
@@ -129,6 +136,7 @@
 </head>
 
 <body>
+  <!-- Naviqasiya -->
   <header>
     <div class="logo">
       <img src="assets/images/ninologo.png" alt="Logo">
@@ -151,6 +159,7 @@
 
   <main></main>
 
+  <!-- ✅ Alt paneldə ikonlar sağda -->
   <footer>
     <p>© 2025 Nino Özbetelaşvili. Bütün hüquqlar qorunur.</p>
     <div class="social-icons">
