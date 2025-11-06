@@ -5,33 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nino Özbetelaşvili</title>
   <style>
-    * {
+    body {
+      background: linear-gradient(135deg, #2A6F97, #6FAED9);
+      color: #f5f5f5;
+      font-family: 'Lato', Arial, sans-serif;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Lato', Arial, sans-serif;
-      color: #fff;
-      min-height: 200vh; /* scroll üçün */
-      overflow-x: hidden;
-      position: relative;
-      background: linear-gradient(135deg, #2A6F97, #6FAED9);
-    }
-
-    /* ✅ SABİT ARXA FON ŞƏKLİ */
-    .background-image {
-      position: fixed;
-      right: 0;
-      bottom: 0;
-      top: 0;
-      width: 55vw;
-      background: url("assets/images/front.png") no-repeat right bottom;
-      background-size: cover;
-      background-position: right 20px top -40px; /* baş və gözlər görünür */
-      z-index: 0;
-      pointer-events: none;
     }
 
     header {
@@ -41,10 +20,59 @@
       padding: 15px 60px;
       background: rgba(106, 166, 208, 0.4);
       backdrop-filter: blur(4px);
+      border-bottom: none;
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 1000;
     }
 
     .logo {
       display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo img {
+      width: 85px;
+      height: 85px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .logo-text h1 {
+      color: #FFD700;
+      font-size: 1.8em;
+      margin: 0;
+      text-shadow: 0 0 10px #FFD700;
+    }
+
+    .logo-text p {
+      margin: 4px 0 0 0;
+      font-size: 1em;
+      color: #fff;
+      opacity: 0.9;
+    }
+
+    nav a {
+      color: #FFD700;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      text-shadow: 0 0 6px #FFD700;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #fff;
+      text-shadow: 0 0 12px #FFD700;
+    }
+
+    main {
+      min-height: 80vh;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      wid
