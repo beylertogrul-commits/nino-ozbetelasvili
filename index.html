@@ -23,7 +23,7 @@
       backdrop-filter: blur(4px);
       position: sticky;
       top: 0;
-      z-index: 2;
+      z-index: 10;
     }
 
     .logo {
@@ -82,22 +82,29 @@
       padding: 12px 0;
       font-size: 0.95em;
       box-shadow: 0 -2px 8px rgba(0,0,0,0.4);
-      z-index: 2;
+      z-index: 5;
     }
 
-    /* ✅ Sağ tərəfdə sabit şəkil */
+    /* 🔹 Sağ yarıda sabit, estetik şəkil */
     .side-image {
       position: fixed;
-      top: 0;
+      bottom: -50px; /* Bir az aşağı düşsün, alt panelə birləşsin */
       right: 0;
-      width: 300px;
+      width: 50vw; /* Ekranın sağ yarısını tutsun */
       height: 100vh;
-      background: url("assets/front.png") center right no-repeat;
-      background-size: contain;
-      opacity: 0.7;
-      filter: brightness(0.9) blur(2px);
+      background-image: url("assets/front.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: right bottom;
+      filter: blur(1.5px) brightness(0.95);
+      opacity: 0.85;
       z-index: 0;
       pointer-events: none;
+    }
+
+    header, main, footer {
+      position: relative;
+      z-index: 2;
     }
 
     @media (max-width: 768px) {
@@ -135,7 +142,6 @@
     © 2025 Nino Özbetelaşvili. Bütün hüquqlar qorunur.
   </footer>
 
-  <!-- 🔹 Sağ tərəf şəkli -->
   <div class="side-image"></div>
 
 </body>
