@@ -14,7 +14,7 @@
       overflow-x: hidden;
     }
 
-    /* Header */
+    /* HEADER */
     header {
       display: flex;
       align-items: center;
@@ -74,24 +74,25 @@
       z-index: 1;
     }
 
-    /* ✅ Şəkil tərtibatı */
+    /* ✅ ŞƏKİL DÜZGÜN TƏRTİBAT */
     .side-image {
       position: fixed;
-      bottom: -10px;
-      right: 0;
-      width: 50vw;
+      right: -40px;           /* bir az sağa çəkilir */
+      bottom: 0;
+      width: 50vw;            /* ekranın yarısını tutur */
       height: auto;
       z-index: 0;
       pointer-events: none;
       display: flex;
-      justify-content: flex-end;
       align-items: flex-end;
+      justify-content: flex-end;
     }
 
     .side-image img {
       width: 100%;
       height: auto;
-      object-fit: contain;
+      object-fit: cover;
+      transform: translateY(40px); /* başın görünməsi üçün bir az yuxarı çəkirik */
     }
 
     footer {
@@ -112,7 +113,6 @@
 </head>
 <body>
 
-  <!-- Naviqasiya -->
   <header>
     <div class="logo">
       <img src="assets/images/ninologo.png" alt="Logo">
@@ -123,26 +123,4 @@
     </div>
 
     <nav>
-      <a href="index.html">Ana səhifə</a>
-      <a href="about.html">Haqqında</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="certificates.html">Sertifikatlar</a>
-      <a href="services.html">Xidmətlər</a>
-      <a href="gallery.html">Qalereya</a>
-      <a href="contact.html">Əlaqə</a>
-    </nav>
-  </header>
-
-  <!-- ✅ Şəkil -->
-  <div class="side-image">
-    <img src="assets/images/front.png" alt="Nino Özbetelaşvili">
-  </div>
-
-  <main></main>
-
-  <footer>
-    © 2025 Nino Özbetelaşvili. Bütün hüquqlar qorunur.
-  </footer>
-
-</body>
-</html>
+      <
