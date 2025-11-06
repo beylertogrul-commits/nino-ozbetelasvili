@@ -26,39 +26,44 @@
       z-index: 1000;
     }
 
-    /* 🔹 Loqo və yazı yan-yana və tam ortada */
+    /* 🔹 Loqo və yazılar yan-yana */
     .logo {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 15px;
     }
 
-    /* 🔹 Loqo şəkli — yazı hündürlüyünə tam uyğun */
+    /* 🔹 Loqo — iki sətrin ümumi hündürlüyünə bərabər */
     .logo img {
-      width: 48px;     /* dəqiq balanslı ölçü */
-      height: 48px;
+      height: 85px;  /* bu iki sətrin hündürlüyünə tam uyğundur */
+      width: 85px;
       border-radius: 50%;
       object-fit: cover;
       background: transparent;
       border: none;
       box-shadow: none;
-      vertical-align: middle;
     }
 
-    /* 🔹 Yazılar */
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
     .logo-text h1 {
       color: #FFD700;
       font-size: 1.6em;
       margin: 0;
-      line-height: 1.1em;
       text-shadow: 0 0 10px #FFD700;
+      line-height: 1.1em;
     }
 
     .logo-text p {
-      margin: 2px 0 0 0;
+      margin: 4px 0 0 0;
       font-size: 0.95em;
       color: #fff;
       opacity: 0.9;
+      line-height: 1.2em;
     }
 
     nav a {
@@ -96,7 +101,6 @@
 </head>
 <body>
 
-  <!-- Naviqasiya -->
   <header>
     <div class="logo">
       <img src="assets/images/ninologo.png" alt="Logo">
