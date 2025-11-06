@@ -12,6 +12,27 @@
       margin: 0;
       padding: 0;
     }
+/* 🔹 Sağ tərəfdə dumanlı estetik şəklin stili */
+.side-image {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 280px;
+  height: 100vh;
+  background-image: url("assets/images/front.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center right;
+  filter: brightness(0.9) blur(1.5px);
+  opacity: 0.75;
+  z-index: 0;
+}
+
+/* Sayt elementləri üstdə qalsın */
+header, main, footer {
+  position: relative;
+  z-index: 1;
+}
 
     header {
       display: flex;
@@ -124,7 +145,7 @@
   <footer>
     © 2025 Nino Özbetelaşvili. Bütün hüquqlar qorunur.
   </footer>
-
+<div class="side-image"></div>
 </body>
 </html>
 
