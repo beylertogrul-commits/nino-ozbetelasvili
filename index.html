@@ -3,15 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nino Özbetelaşvili</title>
+  <title>Ana səhifə | Nino Özbetelaşvili</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       background: linear-gradient(135deg, #2A6F97, #6FAED9);
       color: #f5f5f5;
       font-family: 'Lato', Arial, sans-serif;
       margin: 0;
-      padding-bottom: 90px; /* Footer sabit olduğu üçün aşağı boşluq saxlayırıq */
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
 
     header {
@@ -69,25 +75,26 @@
     }
 
     main {
-      min-height: 80vh;
+      flex: 1;
+      padding: 40px;
+      text-align: center;
     }
 
     /* ✅ Sabit Footer */
     footer {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
       background: linear-gradient(180deg, #1e1e1e, #000);
       border-top: 2px solid #FFD700;
       color: #FFD700;
-      text-align: center;
-      padding: 12px 40px;
+      padding: 15px 40px;
       font-size: 0.95em;
       box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.4);
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
       z-index: 999;
     }
 
@@ -95,7 +102,6 @@
       margin: 0;
     }
 
-    /* ✅ Sosial ikonlar */
     .social-icons {
       display: flex;
       gap: 20px;
@@ -103,8 +109,8 @@
     }
 
     .social-icons a svg {
-      width: 24px;
-      height: 24px;
+      width: 26px;
+      height: 26px;
       fill: #FFD700;
       transition: all 0.3s ease;
     }
@@ -120,6 +126,9 @@
         flex-direction: column;
         text-align: center;
         gap: 10px;
+      }
+      .social-icons {
+        justify-content: center;
       }
     }
   </style>
@@ -149,7 +158,8 @@
 
   <!-- ✅ Əsas məzmun -->
   <main>
-    <!-- Burada səhifənin əsas kontenti olacaq -->
+    <h2>Sayta xoş gəlmisiniz!</h2>
+    <p>Nino Özbetelaşvili – Beynəlxalq təlimçi və Art terapiya mütəxəssisi</p>
   </main>
 
   <!-- ✅ Sabit Footer -->
