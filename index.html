@@ -77,4 +77,51 @@
       width: 100%;
       background: linear-gradient(180deg, #1e1e1e, #000);
       border-top: 2px solid #FFD700;
-      color: #F
+      color: #FFD700;
+      text-align: center;
+      padding: 12px 0;
+      font-size: 0.95em;
+      box-shadow: 0 -2px 8px rgba(0,0,0,0.4);
+      z-index: 5;
+    }
+
+    /* 🔹 Sağda sabit duran şəkil */
+    .side-image {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      width: 50vw; /* ekranın sağ yarısı */
+      height: 100vh; /* tam ekran boyu */
+      background-image: url("assets/front.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: right bottom;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    header, main, footer {
+      position: relative;
+      z-index: 2;
+    }
+
+    @media (max-width: 900px) {
+      .side-image {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="assets/images/ninologo.png" alt="Logo">
+      <div class="logo-text">
+        <h1>Nino Özbetelaşvili</h1>
+        <p>Beynəlxalq təlimçi və Art terapiya mütəxəssisi</p>
+      </div>
+    </div>
+
+    <nav>
+      <a href="index.html">Ana səhifə</a>
