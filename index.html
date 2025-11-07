@@ -9,119 +9,174 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
   <style>
-    :root{
-      --brand-yellow:#FFD700;
-      --header-bg:#0f4a70;          /* yuxarı hissə bir tık tünd */
-      --bg-top:#0f4a70;             /* fon yuxarıda tünd */
-      --bg-bottom:#a9cfea;          /* fon aşağıda açıq */
-      --footer-bg:#0b0b0b;
+    :root {
+      --brand-yellow: #ffd700;
+      --header-bg: #0f4a70;
+      --bg-top: #0f4a70;
+      --bg-bottom: #a9cfea;
+      --footer-bg: #0b0b0b;
     }
 
-    *{box-sizing:border-box;margin:0;padding:0}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    body{
+    body {
       font-family: "Segoe UI", Arial, sans-serif;
-      min-height:100vh;
-      color:#fff;
+      min-height: 100vh;
+      color: #fff;
       background: linear-gradient(to bottom, var(--bg-top), var(--bg-bottom));
-      display:flex;
-      flex-direction:column;
+      display: flex;
+      flex-direction: column;
     }
 
     /* HEADER */
-    header{
+    header {
       background: var(--header-bg);
-      border-bottom:2px solid var(--brand-yellow);
-    }
-    .bar{
-      max-width:1200px;
-      margin:0 auto;
-      padding:12px 20px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:16px;
-    }
-    .brand{
-      display:flex; align-items:center; gap:10px;
-    }
-    .brand img{
-      width:44px;height:44px;border-radius:8px;
-    }
-    .title{
-      line-height:1.1;
-    }
-    .title h1{
-      font-size:22px; font-weight:800; color:var(--brand-yellow);
-    }
-    .title p{
-      font-size:13px; opacity:.95; color:#eaf4ff;
+      border-bottom: 2px solid var(--brand-yellow);
+      position: relative;
+      z-index: 10;
     }
 
-    nav ul{list-style:none; display:flex; gap:28px; flex-wrap:wrap; justify-content:center}
-    nav a{
-      color:var(--brand-yellow);
-      text-decoration:none;
-      font-weight:700;
+    .bar {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
     }
-    nav a:hover{color:#ffffff}
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand img {
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+    }
+
+    .title {
+      line-height: 1.1;
+    }
+
+    .title h1 {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--brand-yellow);
+    }
+
+    .title p {
+      font-size: 13px;
+      color: #eaf4ff;
+      opacity: 0.95;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    nav a {
+      color: var(--brand-yellow);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    nav a:hover {
+      color: #ffffff;
+    }
 
     /* MAIN */
-    main{
-      flex:1;
-      display:flex; align-items:center; justify-content:center;
-      padding:60px 16px;
-    }
-    .badge{
-      background: rgba(255,255,255,.35);
-      color:#0b2745;
-      padding:14px 22px;
-      border-radius:10px;
-      font-weight:700;
-      box-shadow:0 4px 20px rgba(0,0,0,.12) inset;
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 16px;
     }
 
-    /* FOOTER (1-ci addım: yalnız ən aşağıya scroll edəndə göstər)  */
-    footer{
-      position:fixed; left:0; right:0; bottom:0; z-index:999;
+    .badge {
+      background: rgba(255, 255, 255, 0.35);
+      color: #0b2745;
+      padding: 14px 22px;
+      border-radius: 10px;
+      font-weight: 700;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12) inset;
+    }
+
+    /* FOOTER */
+    footer {
       background: var(--footer-bg);
       color: var(--brand-yellow);
-      border-top:2px solid var(--brand-yellow);
-      padding:12px 0;
-      transform: translateY(100%);          /* əvvəl gizli */
-      transition: transform .6s ease;       /* yumşaq çıxış */
+      border-top: 2px solid var(--brand-yellow);
+      padding: 12px 20px;
+      width: 100%;
+      bottom: 0;
+      left: 0;
     }
-    footer.show{ transform: translateY(0); }
 
-    .footer-inner{
-      max-width:1200px; margin:0 auto; padding:0 20px;
-      display:flex; align-items:center; justify-content:center; gap:20px;
-      flex-wrap:wrap;
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
     }
-    .footer-copy{ font-size:14px; text-align:center; }
 
-    .social{
-      display:flex; align-items:center; gap:18px;
-      font-size:20px;
+    .footer-copy {
+      font-size: 14px;
     }
-    .social a{ color:var(--brand-yellow); }
-    .social a:hover{ color:#ffffff; }
+
+    .social {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 20px;
+    }
+
+    .social a {
+      color: var(--brand-yellow);
+      transition: all 0.3s ease;
+    }
+
+    .social a:hover {
+      color: #ffffff;
+      transform: scale(1.2);
+    }
 
     /* kiçik ekranlar üçün */
-    @media (max-width:700px){
-      nav ul{gap:16px}
-      .footer-inner{gap:12px}
+    @media (max-width: 700px) {
+      nav ul {
+        gap: 16px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
 </head>
-<body>
 
+<body>
   <!-- HEADER -->
   <header>
     <div class="bar">
       <div class="brand">
-        <!-- Nino xanımın LOQOSU: öz faylın varsa src-ni dəyiş -->
-        <img src="https://i.imgur.com/6H1n8zN.png" alt="Nino logo">
+        <!-- Nino xanımın logosu -->
+        <img src="https://i.imgur.com/6H1n8zN.png" alt="Nino logo" />
         <div class="title">
           <h1>Nino Özbetelaşvili</h1>
           <p>Beynəlxalq təlimçi və Art terapiya mütəxəssisi</p>
@@ -147,10 +202,12 @@
     <div class="badge">Rəsmi sayt hazırlanır...</div>
   </main>
 
-  <!-- FOOTER (1-ci addım üçün mərkəzdə saxlayırıq; növbəti addımda sol/sağ düzəcəyik) -->
-  <footer id="site-footer">
+  <!-- FOOTER -->
+  <footer>
     <div class="footer-inner">
-      <div class="footer-copy">© 2025 Nino Özbetelaşvili. Bütün hüquqlar qorunur.</div>
+      <div class="footer-copy">
+        © 2025 Nino Özbetelaşvili. Bütün hüquqlar qorunur.
+      </div>
       <div class="social">
         <a href="https://facebook.com/yourprofile" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
         <a href="https://instagram.com/yourprofile" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -158,25 +215,5 @@
       </div>
     </div>
   </footer>
-
-  <!-- JS: səhifə sonuna yaxınlaşanda footeri göstər -->
-  <script>
-    (function(){
-      const footer = document.getElementById('site-footer');
-      function toggleFooter(){
-        const doc = document.documentElement;
-        const scrollable = doc.scrollHeight - window.innerHeight;
-        const scrolled = window.scrollY || window.pageYOffset;
-        if (scrolled >= scrollable - 80){    // sona 80px qalmış görünsün
-          footer.classList.add('show');
-        } else {
-          footer.classList.remove('show');
-        }
-      }
-      toggleFooter();
-      window.addEventListener('scroll', toggleFooter, {passive:true});
-      window.addEventListener('resize', toggleFooter);
-    })();
-  </script>
 </body>
 </html>
