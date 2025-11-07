@@ -25,7 +25,7 @@
 
     body {
       font-family: "Segoe UI", Arial, sans-serif;
-      min-height: 100vh;
+      min-height: 200vh; /* SCROLL üçün əlavə hündürlük */
       color: #fff;
       background: linear-gradient(to bottom, var(--bg-top), var(--bg-bottom));
       display: flex;
@@ -121,8 +121,14 @@
       border-top: 2px solid var(--brand-yellow);
       padding: 12px 20px;
       width: 100%;
-      bottom: 0;
+      position: fixed;
+      bottom: -100px; /* əvvəl gizli vəziyyətdə */
       left: 0;
+      transition: bottom 0.6s ease;
+    }
+
+    footer.show {
+      bottom: 0; /* scroll sonuna çatanda görünür */
     }
 
     .footer-inner {
@@ -156,7 +162,6 @@
       transform: scale(1.2);
     }
 
-    /* kiçik ekranlar üçün */
     @media (max-width: 700px) {
       nav ul {
         gap: 16px;
@@ -175,7 +180,6 @@
   <header>
     <div class="bar">
       <div class="brand">
-        <!-- Nino xanımın logosu -->
         <img src="https://i.imgur.com/6H1n8zN.png" alt="Nino logo" />
         <div class="title">
           <h1>Nino Özbetelaşvili</h1>
@@ -203,7 +207,7 @@
   </main>
 
   <!-- FOOTER -->
-  <footer>
+  <footer id="footer">
     <div class="footer-inner">
       <div class="footer-copy">
         © 2025 Nino Özbetelaşvili. Bütün hüquqlar qorunur.
@@ -215,5 +219,22 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    const footer = document.getElementById("footer");
+
+    window.addEventListener("scroll", () => {
+      const scrollable =
+        document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = window.scrollY;
+
+      // səhifə sonuna 100px qalmış görünür
+      if (scrolled >= scrollable - 100) {
+        footer.classList.add("show");
+      } else {
+        footer.classList.remove("show");
+      }
+    });
+  </script>
 </body>
 </html>
