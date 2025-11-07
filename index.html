@@ -1,133 +1,244 @@
 <!DOCTYPE html>
 <html lang="az">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nino Özbetelaşvili</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(to bottom, #4a90e2, #357ABD);
-            color: white;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nino Özbetelaşvili</title>
 
-        header {
-            background-color: rgba(0, 0, 0, 0.2);
-            padding: 10px 0;
-            border-bottom: 2px solid #FFD700;
-            text-align: center;
-        }
+  <!-- Font Awesome (ikonlar) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
-        header h1 {
-            color: #FFD700;
-            margin: 0;
-            font-size: 24px;
-        }
+  <style>
+    :root {
+      --brand-yellow: #ffd700;
+      --bg-top: #0f4a70;
+      --bg-bottom: #a9cfea;
+      --footer-bg: #0b0b0b;
+    }
 
-        header p {
-            margin: 0;
-            font-size: 14px;
-            color: #fff;
-        }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        nav {
-            margin-top: 10px;
-        }
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      min-height: 200vh;
+      color: #fff;
+      background: linear-gradient(to bottom, var(--bg-top), var(--bg-bottom));
+      display: flex;
+      flex-direction: column;
+    }
 
-        nav a {
-            color: #FFD700;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+    /* HEADER */
+    header {
+      background: transparent;
+      position: relative;
+      z-index: 10;
+      padding: 15px 0;
+    }
 
-        nav a:hover {
-            text-shadow: 0 0 10px #FFD700;
-        }
+    .bar {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
 
-        main {
-            flex: 1;
-            text-align: center;
-            margin-top: 80px;
-        }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
 
-        main h2 {
-            font-size: 26px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
+    .brand img {
+      width: 60px;   /* loqo böyüdülüb */
+      height: 60px;
+      border-radius: 12px;
+      object-fit: cover;
+    }
 
-        main p {
-            font-size: 16px;
-            color: #eaeaea;
-        }
+    .title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      line-height: 1.2;
+      transform: translateY(3px); /* tam ortalamaq üçün kiçik tənzim */
+    }
 
-        footer {
-            background-color: #000;
-            color: #FFD700;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-top: 2px solid #FFD700;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-        }
+    .title h1 {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--brand-yellow);
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
 
-        .footer-left {
-            font-size: 14px;
-        }
+    .title p {
+      font-size: 14px;
+      color: #ffffff;
+      opacity: 0.95;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+    }
 
-        .footer-right a {
-            color: #FFD700;
-            margin-left: 15px;
-            font-size: 18px;
-            text-decoration: none;
-            transition: 0.3s;
-        }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
-        .footer-right a:hover {
-            color: white;
-        }
-    </style>
+    nav a {
+      color: var(--brand-yellow);
+      text-decoration: none;
+      font-weight: 700;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    nav a:hover {
+      color: #ffffff;
+    }
+
+    /* MAIN */
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 16px;
+    }
+
+    .badge {
+      background: rgba(255, 255, 255, 0.35);
+      color: #0b2745;
+      padding: 14px 22px;
+      border-radius: 10px;
+      font-weight: 700;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12) inset;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--footer-bg);
+      color: var(--brand-yellow);
+      border-top: 2px solid var(--brand-yellow);
+      padding: 12px 20px;
+      width: 100%;
+      position: fixed;
+      bottom: -100px;
+      left: 0;
+      transition: bottom 0.6s ease;
+    }
+
+    footer.show {
+      bottom: 0;
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .footer-copy {
+      font-size: 14px;
+    }
+
+    .social {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 20px;
+    }
+
+    .social a {
+      color: var(--brand-yellow);
+      transition: all 0.3s ease;
+    }
+
+    .social a:hover {
+      color: #ffffff;
+      transform: scale(1.2);
+    }
+
+    @media (max-width: 700px) {
+      nav ul {
+        gap: 16px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <h1>Nino Özbetelaşvili</h1>
-        <p>Beynəlxalq təlimçi və Art terapiya mütəxəssisi</p>
-        <nav>
-            <a href="#">Ana səhifə</a>
-            <a href="#">Haqqında</a>
-            <a href="#">Portfolio</a>
-            <a href="#">Sertifikatlar</a>
-            <a href="#">Xidmətlər</a>
-            <a href="#">Qalereya</a>
-            <a href="#">Əlaqə</a>
-        </nav>
-    </header>
-
-    <main>
-        <h2>Sayta xoş gəlmisiniz!</h2>
-        <p>Nino Özbetelaşvili – Beynəlxalq təlimçi və Art terapiya mütəxəssisi</p>
-    </main>
-
-    <footer>
-        <div class="footer-left">
-            © 2025 Nino Özbetelaşvili. Bütün hüquqlar qorunur.
+  <!-- HEADER -->
+  <header>
+    <div class="bar">
+      <div class="brand">
+        <img src="https://i.imgur.com/6H1n8zN.png" alt="Nino logo" />
+        <div class="title">
+          <h1>Nino Özbetelaşvili</h1>
+          <p>Beynəlxalq təlimçi və Art terapiya mütəxəssisi</p>
         </div>
-        <div class="footer-right">
-            <a href="#">&#xf09a;</a> <!-- Facebook -->
-            <a href="#">&#xf16d;</a> <!-- Instagram -->
-            <a href="#">&#xf0e1;</a> <!-- LinkedIn -->
-        </div>
-    </footer>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="#">Ana səhifə</a></li>
+          <li><a href="#">Haqqında</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Sertifikatlar</a></li>
+          <li><a href="#">Xidmətlər</a></li>
+          <li><a href="#">Qalereya</a></li>
+          <li><a href="#">Əlaqə</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <div class="badge">Rəsmi sayt hazırlanır...</div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <div class="footer-copy">
+        © 2025 Nino Özbetelaşvili. Bütün hüquqlar qorunur.
+      </div>
+      <div class="social">
+        <a href="https://facebook.com/yourprofile" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com/yourprofile" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const footer = document.getElementById("footer");
+    window.addEventListener("scroll", () => {
+      const scrollable =
+        document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = window.scrollY;
+      if (scrolled >= scrollable - 100) {
+        footer.classList.add("show");
+      } else {
+        footer.classList.remove("show");
+      }
+    });
+  </script>
 </body>
 </html>
