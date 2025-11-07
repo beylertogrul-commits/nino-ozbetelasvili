@@ -1,245 +1,116 @@
 <!DOCTYPE html>
 <html lang="az">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nino Özbetelaşvili</title>
 
-  <!-- Font Awesome (ikonlar) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-
   <style>
-    :root {
-      --brand-yellow: #ffd700;
-      --bg-top: #0f4a70;
-      --bg-bottom: #a9cfea;
-      --footer-bg: #0b0b0b;
-    }
-
-    * {
-      box-sizing: border-box;
+    /* Ümumi stil */
+    body, html {
       margin: 0;
       padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+      overflow-x: hidden;
     }
 
-    body {
-      font-family: "Segoe UI", Arial, sans-serif;
-      min-height: 200vh; /* scroll üçün */
-      color: #fff;
-      background: linear-gradient(to bottom, var(--bg-top), var(--bg-bottom));
+    /* Arxa fon şəkli və gradient */
+    .hero {
+      position: relative;
+      height: 100vh;
+      background: linear-gradient(to top right, rgba(0, 40, 80, 0.6), rgba(180, 180, 200, 0.4)),
+                  url('assets/images/IMG_0548_2.jpg') center/cover no-repeat;
       display: flex;
       flex-direction: column;
-    }
-
-    /* HEADER */
-    header {
-      background: transparent;
-      position: relative;
-      z-index: 10;
-      padding: 15px 0;
-    }
-
-    .bar {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-      display: flex;
+      justify-content: center;
       align-items: center;
+      text-align: center;
+      transition: all 1s ease;
+    }
+
+    /* Başlıq və alt yazı */
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      color: #f5d76e;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+      animation: fadeIn 2s ease;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 700px;
+      line-height: 1.6;
+      color: #f2f2f2;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+      animation: fadeIn 3s ease;
+    }
+
+    /* Fade animasiyası */
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    /* Footer hissəsi */
+    footer {
+      background: #000;
+      color: #f5d76e;
+      padding: 15px 50px;
+      display: flex;
       justify-content: space-between;
-      gap: 16px;
+      align-items: center;
+      font-size: 0.9rem;
+      border-top: 2px solid #f5d76e;
     }
 
-    .brand {
+    .footer-left {
+      text-align: left;
+    }
+
+    .footer-right {
       display: flex;
-      align-items: center;
       gap: 15px;
     }
 
-    .brand img {
-      width: 60px;
-      height: 60px;
-      border-radius: 12px;
-      object-fit: cover;
-    }
-
-    .title {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      line-height: 1.2;
-      transform: translateY(3px);
-    }
-
-    .title h1 {
-      font-size: 24px;
-      font-weight: 800;
-      color: var(--brand-yellow);
-      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    }
-
-    .title p {
-      font-size: 14px;
-      color: #ffffff;
-      opacity: 0.95;
-      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 28px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    nav a {
-      color: var(--brand-yellow);
+    .footer-right a {
+      color: #f5d76e;
+      font-size: 1.2rem;
       text-decoration: none;
-      font-weight: 700;
-      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, color 0.3s ease;
     }
 
-    nav a:hover {
-      color: #ffffff;
-    }
-
-    /* MAIN */
-    main {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 80px 16px;
-    }
-
-    .badge {
-      background: rgba(255, 255, 255, 0.35);
-      color: #0b2745;
-      padding: 14px 22px;
-      border-radius: 10px;
-      font-weight: 700;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12) inset;
-    }
-
-    /* FOOTER */
-    footer {
-      background: var(--footer-bg);
-      color: var(--brand-yellow);
-      border-top: 2px solid var(--brand-yellow);
-      padding: 12px 20px;
-      width: 100%;
-      position: fixed;
-      bottom: -100px;
-      left: 0;
-      transition: bottom 0.6s ease;
-    }
-
-    footer.show {
-      bottom: 0;
-    }
-
-    .footer-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .footer-copy {
-      font-size: 14px;
-    }
-
-    .social {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      font-size: 20px;
-    }
-
-    .social a {
-      color: var(--brand-yellow);
-      transition: all 0.3s ease;
-    }
-
-    .social a:hover {
-      color: #ffffff;
+    .footer-right a:hover {
+      color: #fff;
       transform: scale(1.2);
     }
 
-    @media (max-width: 700px) {
-      nav ul {
-        gap: 16px;
-      }
-
-      .footer-inner {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
+    /* Sosial ikonlar üçün fontawesome */
+    @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
   </style>
 </head>
 
 <body>
-  <!-- HEADER -->
-  <header>
-    <div class="bar">
-      <div class="brand">
-        <!-- Nino xanımın öz logosu -->
-        <img src="assets/images/ninologo.png" alt="Nino logo" />
-        <div class="title">
-          <h1>Nino Özbetelaşvili</h1>
-          <p>Beynəlxalq dərəcəli təlimçi və art terapiya üzrə mütəxəssis</p>
-        </div>
-      </div>
 
-      <nav>
-        <ul>
-          <li><a href="#">Ana səhifə</a></li>
-          <li><a href="#">Haqqında</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">Sertifikatlar</a></li>
-          <li><a href="#">Xidmətlər</a></li>
-          <li><a href="#">Qalereya</a></li>
-          <li><a href="#">Əlaqə</a></li>
-        </ul>
-      </nav>
+  <!-- Hero bölməsi -->
+  <div class="hero">
+    <h1>Daxili rənglərini kəşf et.</h1>
+    <p>Nino Özbetelaşvili — beynəlxalq dərəcəli təlimçi, kouç və art terapiya üzrə mütəxəssis.</p>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-left">
+      © 2025 Nino Özbetelaşvili. Bütün hüquqlar qorunur.
     </div>
-  </header>
-
-  <!-- MAIN -->
-  <main>
-    <div class="badge">Rəsmi sayt hazırlanır...</div>
-  </main>
-
-  <!-- FOOTER -->
-  <footer id="footer">
-    <div class="footer-inner">
-      <div class="footer-copy">
-        © 2025 Nino Özbetelaşvili. Bütün hüquqlar qorunur.
-      </div>
-      <div class="social">
-        <a href="https://facebook.com/yourprofile" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://instagram.com/yourprofile" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-      </div>
+    <div class="footer-right">
+      <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
     </div>
   </footer>
 
-  <script>
-    const footer = document.getElementById("footer");
-    window.addEventListener("scroll", () => {
-      const scrollable =
-        document.documentElement.scrollHeight - window.innerHeight;
-      const scrolled = window.scrollY;
-      if (scrolled >= scrollable - 100) {
-        footer.classList.add("show");
-      } else {
-        footer.classList.remove("show");
-      }
-    });
-  </script>
 </body>
 </html>
