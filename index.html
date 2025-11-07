@@ -125,5 +125,58 @@
       }
     });
   </script>
+  <style>
+/* --- Scroll ilə fon keçidi --- */
+body {
+  background: linear-gradient(to bottom, #001aff 0%, #2962ff 40%, #7fa8ff 75%, #ffffff 100%);
+  background-attachment: fixed;
+  transition: background 0.3s ease;
+}
+
+/* --- Footer scroll ilə görünməsi --- */
+footer {
+  position: fixed;
+  bottom: -60px;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 14px;
+  transition: bottom 0.4s ease;
+  z-index: 9999;
+}
+footer.show {
+  bottom: 0;
+}
+</style>
+
+<script>
+/* --- FON keçidi effekti --- */
+window.addEventListener("scroll", function () {
+  let scrollTop = window.scrollY;
+  let docHeight = document.body.scrollHeight - window.innerHeight;
+  let scrollPercent = scrollTop / docHeight;
+
+  document.body.style.background = 
+  `linear-gradient(to bottom,
+    rgba(0,26,255,1) 0%,
+    rgba(41,98,255,${1 - scrollPercent}) 35%,
+    rgba(127,168,255,${1 - scrollPercent}) 70%,
+    rgba(255,255,255,1) 100%)`;
+});
+
+/* --- Footer görünməsi --- */
+window.addEventListener('scroll', () => {
+  const footer = document.querySelector('footer');
+  if (window.scrollY > 120) {
+    footer.classList.add('show');
+  } else {
+    footer.classList.remove('show');
+  }
+});
+</script>
+
 </body>
 </html>
