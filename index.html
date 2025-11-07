@@ -3,30 +3,173 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nino Özbetelaşvili | Mentor</title>
+  <title>Nino Özbetelaşvili | Art Terapiya & Mentor</title>
 
   <style>
-    /* Ümumi stil */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    body {
+    html, body {
+      height: 100%;
+      scroll-behavior: smooth;
       font-family: "Poppins", sans-serif;
-      color: #fff;
-      background: linear-gradient(to bottom, #001aff, #3c6fff, #89a9ff, #d4e2ff, #ffffff);
-      background-attachment: fixed;
-      transition: background 0.5s ease;
-      min-height: 100vh;
     }
 
+    /* --- Scroll ilə tünddən açığa keçən fon --- */
+    body {
+      background: linear-gradient(to bottom, #001aff 0%, #2962ff 40%, #7fa8ff 75%, #ffffff 100%);
+      background-attachment: fixed;
+      transition: background 0.3s ease;
+      color: #fff;
+    }
+
+    /* --- Header / Naviqasiya --- */
     header {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       background: rgba(0, 0, 0, 0.7);
+      text-align: center;
+      padding: 15px 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 1.7em;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 12px;
+      font-size: 15px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    /* --- Bölmələr --- */
+    section {
+      padding: 120px 20px 80px;
+      text-align: center;
+      min-height: 100vh;
+    }
+
+    section h2 {
+      font-size: 2em;
+      margin-bottom: 15px;
+    }
+
+    section p {
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+      font-size: 1.1em;
+    }
+
+    /* --- Footer (scroll ilə görünür) --- */
+    footer {
+      position: fixed;
+      bottom: -60px;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.85);
       color: #fff;
       text-align: center;
+      padding: 10px 0;
+      font-size: 14px;
+      transition: bottom 0.4s ease;
+      z-index: 9999;
+    }
+
+    footer.show {
+      bottom: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Nino Özbetelaşvili</h1>
+    <nav>
+      <a href="#home">Ana səhifə</a>
+      <a href="#about">Haqqında</a>
+      <a href="#services">Xidmətlər</a>
+      <a href="#contact">Əlaqə</a>
+    </nav>
+  </header>
+
+  <!-- Ana səhifə -->
+  <section id="home">
+    <h2>Art Terapiya və Şəxsi İnkişaf üzrə Mentor</h2>
+    <p>
+      Nino xanımın məqsədi insanların daxili potensialını kəşf etməsinə, balans və harmoniyaya nail olmasına kömək etməkdir.
+    </p>
+  </section>
+
+  <!-- Haqqında -->
+  <section id="about">
+    <h2>Haqqında</h2>
+    <p>
+      Nino Özbetelaşvili beynəlxalq səviyyədə təcrübəyə malik Art Terapiya mütəxəssisidir.
+      O, fərdi və qrup şəklində təlimlər vasitəsilə emosional rifah və şəxsiyyət inkişafı sahəsində fəaliyyət göstərir.
+    </p>
+  </section>
+
+  <!-- Xidmətlər -->
+  <section id="services">
+    <h2>Xidmətlər</h2>
+    <p>
+      Art terapiya seansları, fərdi mentorluq, özünü tanıma proqramları və təlimlər.
+    </p>
+  </section>
+
+  <!-- Əlaqə -->
+  <section id="contact">
+    <h2>Əlaqə</h2>
+    <p>
+      Əlaqə üçün: <strong>info@ninoozbetelasvili.com</strong>
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer id="mainFooter">
+    © 2025 Nino Özbetelaşvili. Bütün hüquqlar qorunur.
+  </footer>
+
+  <script>
+    /* --- Fon rəng keçidi effekti --- */
+    window.addEventListener("scroll", function () {
+      let scrollTop = window.scrollY;
+      let docHeight = document.body.scrollHeight - window.innerHeight;
+      let scrollPercent = scrollTop / docHeight;
+
+      document.body.style.background =
+        `linear-gradient(to bottom,
+        rgba(0,26,255,1) 0%,
+        rgba(41,98,255,${1 - scrollPercent * 0.7}) 40%,
+        rgba(127,168,255,${1 - scrollPercent * 0.3}) 70%,
+        rgba(255,255,255,1) 100%)`;
+    });
+
+    /* --- Footer scroll zamanı görünməsi --- */
+    window.addEventListener('scroll', () => {
+      const footer = document.getElementById('mainFooter');
+      if (window.scrollY > 150) {
+        footer.classList.add('show');
+      } else {
+        footer.classList.remove('show');
+      }
+    });
+  </script>
+</body>
+</html>
