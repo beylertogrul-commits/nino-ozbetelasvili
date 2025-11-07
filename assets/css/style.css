@@ -1,161 +1,122 @@
-/* Ümumi tərz */
-body {
-    overflow-x: hidden; /* sağa-sola uzanma problemini bloklayır */
-    background: linear-gradient(135deg, #2A6F97, #6FAED9); /* Mind Blue gradient */
-    color: #f5f5f5;
-    font-family: 'Lato', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-/* Naviqasiya menyusu */
-/* Header – şəffaf, logo solda, menyu sağda */
-header{
-  background: transparent;   /* qara panel YOX */
-  border: 0;                 /* qızılı xətlər YOX */
-  box-shadow: none;          /* kölgə YOX */
-  width: 100%;
+/* Ümumi tənzimləmələr */
+body, html {
   margin: 0;
-  padding: 10px 0;           /* incə yuxarı-aşağı boşluq */
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+  background: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.3)),
+              url('../images/IMG_0548_2.jpg') center/cover no-repeat fixed;
 }
 
-/* İç konteyner: logo solda, menyu sağda */
-.header-inner{
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* logo sola, menyu sağa */
-}
-
-/* Logo */
-.logo{
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-}
-.logo img{
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #FFD700;  /* qızılı halqa */
-}
-.logo span{
-  color: #FFD700;             /* istəsən mətn də olsun */
-  font-weight: 700;
-}
-
-/* Menyu linkləri sağda */
-nav{
-  display: flex;
-  gap: 18px;
-  align-items: center;
-}
-nav a{
-  color: #FFD700;             /* qızılı */
-  text-decoration: none;
-  font-weight: 700;
-  text-shadow: 0 0 6px #FFD700;
-}
-nav a:hover{ color:#fff; }
-
-
-/* Əsas bölmə */
-main {
-   background: rgba(255,255,255,0.15); /* şəffaf ağ */
-  box-shadow: 0 0 25px rgba(0,0,0,0.3);
-  backdrop-filter: blur(8px); /* incə şüşə effekti */
-}
-
-/* Başlıqlar */
-h1, h2 {
-  color: #FFD700;
-}
-
-/* Altlıq */
-footer {
+/* HEADER */
+header {
+  background: transparent;
+  padding: 15px 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(90deg, #1a1a1a, #2d2d2d, #1a1a1a);
-  /* border-bottom: 2px solid #FFD700; */
-  color: #FFD700;
-  padding: 15px 40px;
+  flex-wrap: wrap;
 }
 
-footer .social a {
-  color: #FFD700;
-  margin-left: 15px;
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.brand img {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+}
+
+.brand .title h1 {
+  margin: 0;
+  font-size: 22px;
+  color: #f5d76e;
+}
+
+.brand .title p {
+  margin: 0;
+  font-size: 13px;
+  color: #fff;
+}
+
+/* MENYU */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
   text-decoration: none;
+  color: #f5d76e;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
-footer .social a:hover {
-  color: white;
+nav a:hover {
+  color: #fff;
 }
 
-
-/* Button-lar üçün vurğu rəngi */
-button {
-  background-color: #FFD700;
-  color: #2A6F97;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
+/* HERO MƏTNİ */
+main {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
 }
 
-button:hover {
-  background-color: #e6c200;
-}
-.logo-container {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%; /* Dairəvi forma */
-  overflow: hidden;   /* Şəkilin dairədən çıxmaması üçün */
-  background: none;   /* Arxa fonu silmək üçün */
+.hero-text h2 {
+  font-size: 2.5rem;
+  color: #f5d76e;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
 
-.logo-container img {
+.hero-text p {
+  max-width: 700px;
+  font-size: 1.2rem;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  margin-top: 15px;
+}
+
+/* FOOTER */
+footer {
+  background: rgba(0, 0, 0, 0.7);
+  border-top: 2px solid #f5d76e;
+  color: #f5d76e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  position: fixed;
+  bottom: -100px;
+  left: 0;
   width: 100%;
-  height: 100%;
-  object-fit: cover; /* Loqonu dairəyə uyğun yerləşdirir */
-}
-/* ====== Loqo üçün əlavə etdiyimiz hissə ====== */
-.logo-container {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;  /* Dairəvi forma */
-  overflow: hidden;    /* Şəkilin dairədən çıxmaması üçün */
-  background: none;    /* Arxa fonu silmək üçün */
-  position: absolute;  /* Yerini təyin etmək üçün */
-  top: 20px;           /* Üstdən məsafə */
-  left: 20px;          /* Soldan məsafə */
+  transition: bottom 0.6s ease;
+  font-size: 0.9rem;
 }
 
-.logo-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;   /* Loqonu dairəyə uyğunlaşdırır */
-}
-/* ==== Logo düzəliş ==== */
-.logo-container {
-  width: 110px; /* ölçünü böyütdük */
-  height: 110px;
-  border-radius: 50%;
-  overflow: hidden;
-  background: none; /* arxa fonu ləğv edir */
-  position: absolute;
-  top: 10px;
-  left: 20px;
-  border: none; /* kənar çərçivəni də silirik */
+footer.show {
+  bottom: 0;
 }
 
-.logo-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain; /* şəkil deformasiyasız uyğunlaşsın */
-  background: transparent; /* şəffaf fon */
+.footer-right a {
+  color: #f5d76e;
+  margin-left: 15px;
+  font-size: 18px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-right a:hover {
+  color: #fff;
+  transform: scale(1.2);
 }
