@@ -24,7 +24,7 @@
 
     body {
       font-family: "Segoe UI", Arial, sans-serif;
-      min-height: 200vh; /* Scroll üçün */
+      min-height: 200vh;
       color: #fff;
       background: linear-gradient(to bottom, var(--bg-top), var(--bg-bottom));
       display: flex;
@@ -33,7 +33,7 @@
 
     /* HEADER */
     header {
-      background: transparent; /* şəffaf */
+      background: transparent;
       position: relative;
       z-index: 10;
       padding: 15px 0;
@@ -52,28 +52,33 @@
     .brand {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 15px;
     }
 
     .brand img {
-      width: 44px;
-      height: 44px;
-      border-radius: 8px;
+      width: 60px;   /* loqo böyüdülüb */
+      height: 60px;
+      border-radius: 12px;
+      object-fit: cover;
     }
 
     .title {
-      line-height: 1.1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      line-height: 1.2;
+      transform: translateY(3px); /* tam ortalamaq üçün kiçik tənzim */
     }
 
     .title h1 {
-      font-size: 22px;
+      font-size: 24px;
       font-weight: 800;
       color: var(--brand-yellow);
       text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     }
 
     .title p {
-      font-size: 13px;
+      font-size: 14px;
       color: #ffffff;
       opacity: 0.95;
       text-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
