@@ -6,8 +6,9 @@ body, html {
   font-family: 'Segoe UI', sans-serif;
   color: #fff;
   overflow-x: hidden;
-  background: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.3)),
-              url('../images/IMG_0548_2.jpg') center/cover no-repeat fixed;
+            background: linear-gradient(...),
+            url('../images/YENI_SEKIL_ADI.jpg') center/cover no-repeat fixed;
+
 }
 
 /* HEADER */
