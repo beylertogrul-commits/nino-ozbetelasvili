@@ -4,108 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nino Özbetelaşvili</title>
+  <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-
-  <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      font-family: 'Segoe UI', sans-serif;
-      color: #fff;
-      background: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.3)),
-                  url('assets/images/IMG_0548_2.jpg') center/cover no-repeat fixed;
-      overflow-x: hidden;
-    }
-
-    /* HEADER */
-    header {
-      background: transparent;
-      padding: 15px 50px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: relative;
-      z-index: 10;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
-
-    .brand img {
-      width: 55px;
-      height: 55px;
-      border-radius: 10px;
-    }
-
-    .brand .title h1 {
-      margin: 0;
-      font-size: 22px;
-      color: #f5d76e;
-    }
-
-    .brand .title p {
-      margin: 0;
-      font-size: 13px;
-      color: #fff;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 25px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #f5d76e;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      color: #fff;
-    }
-
-    /* FOOTER */
-    footer {
-      background: rgba(0,0,0,0.7);
-      border-top: 2px solid #f5d76e;
-      color: #f5d76e;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 40px;
-      position: fixed;
-      bottom: -100px;
-      left: 0;
-      width: 100%;
-      transition: bottom 0.6s ease;
-      font-size: 0.9rem;
-    }
-
-    footer.show {
-      bottom: 0;
-    }
-
-    .social a {
-      color: #f5d76e;
-      margin-left: 15px;
-      font-size: 18px;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-
-    .social a:hover {
-      color: #fff;
-      transform: scale(1.2);
-    }
-  </style>
 </head>
 
 <body>
+  <!-- HEADER -->
   <header>
     <div class="brand">
       <img src="assets/images/ninologo.png" alt="Nino logo">
@@ -128,9 +32,18 @@
     </nav>
   </header>
 
+  <!-- MAIN CONTENT -->
+  <main>
+    <div class="hero-text">
+      <h2>Daxili rənglərini kəşf et.</h2>
+      <p>Ruhunla sənətin harmoniyasını yarat — art terapiya, fərdi inkişaf və yaradıcılıqla balanslı həyat üçün ilham.</p>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
   <footer id="footer">
-    <div>© 2025 Nino Özbetelaşvili. Bütün hüquqlar qorunur.</div>
-    <div class="social">
+    <div class="footer-left">© 2025 Nino Özbetelaşvili. Bütün hüquqlar qorunur.</div>
+    <div class="footer-right">
       <a href="#"><i class="fab fa-facebook-f"></i></a>
       <a href="#"><i class="fab fa-instagram"></i></a>
       <a href="#"><i class="fab fa-linkedin-in"></i></a>
