@@ -1,198 +1,129 @@
 <!DOCTYPE html>
 <html lang="az">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nino Özbetelaşvili</title>
-
-  <!-- Font Awesome (ikonlar üçün) -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    crossorigin="anonymous"
-  />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nino Özbetelaşvili | Mentor Saytı</title>
 
   <style>
-    body {
-      background: linear-gradient(135deg, #2A6F97, #6FAED9);
-      color: #f5f5f5;
-      font-family: 'Lato', Arial, sans-serif;
+    /* Ümumi stil */
+    html, body {
       margin: 0;
       padding: 0;
-      overflow-x: hidden;
+      height: 100%;
+      font-family: "Poppins", sans-serif;
+      scroll-behavior: smooth;
     }
 
-    /* ======== HEADER ======== */
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 15px 60px;
-      background: rgba(106, 166, 208, 0.4);
-      backdrop-filter: blur(4px);
-      border-bottom: 2px solid #FFD700;
-      position: sticky;
+    /* Fon rəngi – tünd göydən açıq tona keçid */
+    body {
+      background: linear-gradient(to bottom, #001aff, #3c6fff, #89a9ff, #d4e2ff, #ffffff);
+      background-attachment: fixed;
+      transition: background 0.5s ease;
+      min-height: 200vh; /* scroll test üçün */
+    }
+
+    /* Naviqasiya paneli */
+    nav {
+      position: fixed;
       top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      padding: 15px 0;
+      text-align: center;
+      font-weight: 500;
       z-index: 1000;
     }
 
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
-
-    .logo img {
-      width: 75px;
-      height: 75px;
-      border-radius: 50%;
-      object-fit: cover;
-      background: transparent;
-    }
-
-    .logo-text h1 {
-      color: #FFD700;
-      font-size: 1.6em;
-      margin: 0;
-      text-shadow: 0 0 10px #FFD700;
-    }
-
-    .logo-text p {
-      margin: 4px 0 0 0;
-      font-size: 0.95em;
-      color: #fff;
-      opacity: 0.9;
-    }
-
     nav a {
-      color: #FFD700;
+      color: #fff;
       text-decoration: none;
       margin: 0 15px;
-      font-weight: bold;
-      text-shadow: 0 0 6px #FFD700;
-      transition: all 0.3s ease;
+      font-size: 15px;
+      transition: color 0.3s;
     }
 
     nav a:hover {
+      color: #ffd700;
+    }
+
+    /* Ana hissə */
+    section {
+      padding: 120px 20px 100px;
+      text-align: center;
       color: #fff;
-      text-shadow: 0 0 12px #FFD700;
     }
 
-    main {
-      min-height: 80vh;
+    section h1 {
+      font-size: 2.5em;
+      margin-bottom: 15px;
     }
 
-    /* ======== FOOTER ======== */
+    section p {
+      font-size: 1.1em;
+      color: #e6e6e6;
+    }
+
+    /* Footer – scroll zamanı görünür */
     footer {
       position: fixed;
-      bottom: 0;
+      bottom: -70px; /* əvvəlcə görünməsin */
       left: 0;
       width: 100%;
-      background: linear-gradient(180deg, #1e1e1e, #000);
-      border-top: 2px solid #FFD700;
-      color: #FFD700;
+      background: rgba(0, 0, 0, 0.85);
+      color: #f0f0f0;
       text-align: center;
       padding: 12px 0;
-      font-size: 0.95em;
-      box-shadow: 0 -2px 8px rgba(0,0,0,0.4);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 15px;
-      z-index: 100;
-    }
-
-    .social-icons a {
-      color: #FFD700;
-      margin: 0 8px;
-      font-size: 1.3em;
-      transition: all 0.3s ease;
-    }
-
-    .social-icons a:hover {
-      color: #fff;
-      text-shadow: 0 0 12px #FFD700;
-    }
-
-    /* ======== PRELOADER ======== */
-    #preloader {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, #2A6F97, #6FAED9);
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      font-size: 14px;
+      transition: bottom 0.4s ease;
       z-index: 9999;
-      transition: opacity 0.6s ease;
     }
 
-    #preloader img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      animation: spin 2s linear infinite;
-      box-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
+    footer.show {
+      bottom: 0; /* scroll zamanı görünəcək */
     }
 
-    @keyframes spin {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
   </style>
 </head>
+
 <body>
+  <!-- Naviqasiya -->
+  <nav>
+    <a href="#home">Ana səhifə</a>
+    <a href="#about">Haqqında</a>
+    <a href="#services">Xidmətlər</a>
+    <a href="#contact">Əlaqə</a>
+  </nav>
 
-  <!-- ✅ PRELOADER -->
-  <div id="preloader">
-    <img src="assets/images/ninologo.png" alt="Logo">
-  </div>
+  <!-- Ana bölmə -->
+  <section id="home">
+    <h1>Nino Özbetelaşvili</h1>
+    <p>Beynəlxalq Art Terapiya və Şəxsi İnkişaf üzrə Mentor</p>
+  </section>
 
-  <!-- ✅ HEADER -->
-  <header>
-    <div class="logo">
-      <img src="assets/images/ninologo.png" alt="Logo">
-      <div class="logo-text">
-        <h1>Nino Özbetelaşvili</h1>
-        <p>Beynəlxalq təlimçi və Art terapiya mütəxəssisi</p>
-      </div>
-    </div>
+  <!-- Sadə test üçün uzun səhifə -->
+  <section id="about">
+    <h2>Haqqında</h2>
+    <p>Bu bölmədə Nino xanımın peşəkar təcrübəsi, tədris fəaliyyəti və xidmətləri haqqında məlumat veriləcək.</p>
+  </section>
 
-    <nav>
-      <a href="index.html">Ana səhifə</a>
-      <a href="about.html">Haqqında</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="certificates.html">Sertifikatlar</a>
-      <a href="services.html">Xidmətlər</a>
-      <a href="gallery.html">Qalereya</a>
-      <a href="contact.html">Əlaqə</a>
-    </nav>
-  </header>
-
-  <main></main>
-
-  <!-- ✅ FOOTER -->
-  <footer>
-    <p>© 2025 Nino Özbetelaşvili. Bütün hüquqlar qorunur.</p>
-    <div class="social-icons">
-      <a href="https://www.facebook.com/share/17VeKzPxvn/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook"></i></a>
-      <a href="https://www.instagram.com/ninoozbetelasvili_/" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.linkedin.com/in/nino-ozbet-a27512390/" target="_blank"><i class="fab fa-linkedin"></i></a>
-    </div>
+  <!-- Footer -->
+  <footer id="mainFooter">
+    © 2025 Nino Özbetelaşvili. Bütün hüquqlar qorunur.
   </footer>
 
-  <!-- ✅ PRELOADERIN YOX OLMA FUNKSİYASI -->
   <script>
-    window.addEventListener("load", () => {
-      const preloader = document.getElementById("preloader");
-      preloader.style.opacity = "0";
-      setTimeout(() => {
-        preloader.style.display = "none";
-      }, 600);
+    // Footer scroll zamanı görünməsi üçün
+    window.addEventListener('scroll', () => {
+      const footer = document.getElementById('mainFooter');
+      if (window.scrollY > 100) {
+        footer.classList.add('show');
+      } else {
+        footer.classList.remove('show');
+      }
     });
   </script>
-
 </body>
 </html>
