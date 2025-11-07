@@ -6,8 +6,10 @@ body, html {
   font-family: 'Segoe UI', sans-serif;
   color: #fff;
   overflow-x: hidden;
-            background: linear-gradient(...),
-            url('../images/WhatsApp Görsel 2025-11-04 saat 10.19.34_f39e3dec.jpg') center/cover no-repeat fixed;
+  background: linear-gradient(to top, rgba(0,0,0,0.4), rgba(0,0,0,0.2)),
+              url('/assets/images/IMG_0548_2.jpg') center/cover no-repeat fixed;
+}
+
 
 }
 
