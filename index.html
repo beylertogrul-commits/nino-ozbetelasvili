@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="az">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nino Özbetelaşvili | Art Terapiya & Mentor</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nino Ozbetelasvili</title>
+
+  <!-- Font Awesome ikonlar üçün -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
     * {
@@ -12,164 +15,87 @@
       box-sizing: border-box;
     }
 
-    html, body {
-      height: 100%;
-      scroll-behavior: smooth;
-      font-family: "Poppins", sans-serif;
-    }
-
-    /* --- Scroll ilə tünddən açığa keçən fon --- */
     body {
-      background: linear-gradient(to bottom, #001aff 0%, #2962ff 40%, #7fa8ff 75%, #ffffff 100%);
-      background-attachment: fixed;
-      transition: background 0.3s ease;
-      color: #fff;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #9cc3d5, #c1d7e3);
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
-    /* --- Header / Naviqasiya --- */
     header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.7);
+      padding: 20px;
       text-align: center;
-      padding: 15px 0;
-      z-index: 1000;
     }
 
     header h1 {
-      font-size: 1.7em;
-      letter-spacing: 1px;
-      margin-bottom: 8px;
+      font-size: 28px;
+      color: #1c3d5a;
     }
 
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 12px;
-      font-size: 15px;
-      transition: color 0.3s;
+    header p {
+      font-size: 16px;
+      color: #2c5573;
+      margin-top: 5px;
     }
 
-    nav a:hover {
-      color: #ffd700;
-    }
-
-    /* --- Bölmələr --- */
-    section {
-      padding: 120px 20px 80px;
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      min-height: 100vh;
+      padding: 40px 20px;
     }
 
-    section h2 {
-      font-size: 2em;
-      margin-bottom: 15px;
+    main h2 {
+      color: #1c3d5a;
+      font-size: 22px;
     }
 
-    section p {
-      max-width: 800px;
-      margin: 0 auto;
-      line-height: 1.6;
-      font-size: 1.1em;
-    }
-
-    /* --- Footer (scroll ilə görünür) --- */
-    footer {
+    /* ALT SAĞ KÜNC - SOSİAL MEDİA İKONLARI */
+    .social-icons {
       position: fixed;
-      bottom: -60px;
-      left: 0;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.85);
-      color: #fff;
-      text-align: center;
-      padding: 10px 0;
-      font-size: 14px;
-      transition: bottom 0.4s ease;
-      z-index: 9999;
+      bottom: 20px;
+      right: 25px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      z-index: 999;
     }
 
-    footer.show {
-      bottom: 0;
+    .social-icons a {
+      color: #1c3d5a;
+      font-size: 22px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #0077b5; /* hover effekti - mavi ton */
+      transform: scale(1.2);
     }
   </style>
 </head>
-
 <body>
-  <!-- Header -->
+
   <header>
-    <h1>Nino Özbetelaşvili</h1>
-    <nav>
-      <a href="#home">Ana səhifə</a>
-      <a href="#about">Haqqında</a>
-      <a href="#services">Xidmətlər</a>
-      <a href="#contact">Əlaqə</a>
-    </nav>
+    <h1>Nino Ozbetelasvili</h1>
+    <p>Beynəlxalq təlimçi və Art terapiya mütəxəssisi</p>
   </header>
 
-  <!-- Ana səhifə -->
-  <section id="home">
-    <h2>Art Terapiya və Şəxsi İnkişaf üzrə Mentor</h2>
-    <p>
-      Nino xanımın məqsədi insanların daxili potensialını kəşf etməsinə, balans və harmoniyaya nail olmasına kömək etməkdir.
-    </p>
-  </section>
+  <main>
+    <h2>Rəsmi sayt hazırlanır...</h2>
+  </main>
 
-  <!-- Haqqında -->
-  <section id="about">
-    <h2>Haqqında</h2>
-    <p>
-      Nino Özbetelaşvili beynəlxalq səviyyədə təcrübəyə malik Art Terapiya mütəxəssisidir.
-      O, fərdi və qrup şəklində təlimlər vasitəsilə emosional rifah və şəxsiyyət inkişafı sahəsində fəaliyyət göstərir.
-    </p>
-  </section>
+  <!-- SOSİAL MEDİA İKONLARI (alt sağ künc) -->
+  <div class="social-icons">
+    <a href="https://facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
+  </div>
 
-  <!-- Xidmətlər -->
-  <section id="services">
-    <h2>Xidmətlər</h2>
-    <p>
-      Art terapiya seansları, fərdi mentorluq, özünü tanıma proqramları və təlimlər.
-    </p>
-  </section>
-
-  <!-- Əlaqə -->
-  <section id="contact">
-    <h2>Əlaqə</h2>
-    <p>
-      Əlaqə üçün: <strong>info@ninoozbetelasvili.com</strong>
-    </p>
-  </section>
-
-  <!-- Footer -->
-  <footer id="mainFooter">
-    © 2025 Nino Özbetelaşvili. Bütün hüquqlar qorunur.
-  </footer>
-
-  <script>
-    /* --- Fon rəng keçidi effekti --- */
-    window.addEventListener("scroll", function () {
-      let scrollTop = window.scrollY;
-      let docHeight = document.body.scrollHeight - window.innerHeight;
-      let scrollPercent = scrollTop / docHeight;
-
-      document.body.style.background =
-        `linear-gradient(to bottom,
-        rgba(0,26,255,1) 0%,
-        rgba(41,98,255,${1 - scrollPercent * 0.7}) 40%,
-        rgba(127,168,255,${1 - scrollPercent * 0.3}) 70%,
-        rgba(255,255,255,1) 100%)`;
-    });
-
-    /* --- Footer scroll zamanı görünməsi --- */
-    window.addEventListener('scroll', () => {
-      const footer = document.getElementById('mainFooter');
-      if (window.scrollY > 150) {
-        footer.classList.add('show');
-      } else {
-        footer.classList.remove('show');
-      }
-    });
-  </script>
 </body>
 </html>
