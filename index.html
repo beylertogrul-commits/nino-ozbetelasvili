@@ -11,7 +11,6 @@
   <style>
     :root {
       --brand-yellow: #ffd700;
-      --header-bg: #0f4a70;
       --bg-top: #0f4a70;
       --bg-bottom: #a9cfea;
       --footer-bg: #0b0b0b;
@@ -25,7 +24,7 @@
 
     body {
       font-family: "Segoe UI", Arial, sans-serif;
-      min-height: 200vh; /* SCROLL üçün əlavə hündürlük */
+      min-height: 200vh; /* Scroll üçün */
       color: #fff;
       background: linear-gradient(to bottom, var(--bg-top), var(--bg-bottom));
       display: flex;
@@ -34,16 +33,16 @@
 
     /* HEADER */
     header {
-      background: var(--header-bg);
-      border-bottom: 2px solid var(--brand-yellow);
+      background: transparent; /* şəffaf */
       position: relative;
       z-index: 10;
+      padding: 15px 0;
     }
 
     .bar {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 12px 20px;
+      padding: 0 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -70,12 +69,14 @@
       font-size: 22px;
       font-weight: 800;
       color: var(--brand-yellow);
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     }
 
     .title p {
       font-size: 13px;
-      color: #eaf4ff;
+      color: #ffffff;
       opacity: 0.95;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
     }
 
     nav ul {
@@ -90,6 +91,7 @@
       color: var(--brand-yellow);
       text-decoration: none;
       font-weight: 700;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
     }
 
     nav a:hover {
@@ -122,13 +124,13 @@
       padding: 12px 20px;
       width: 100%;
       position: fixed;
-      bottom: -100px; /* əvvəl gizli vəziyyətdə */
+      bottom: -100px;
       left: 0;
       transition: bottom 0.6s ease;
     }
 
     footer.show {
-      bottom: 0; /* scroll sonuna çatanda görünür */
+      bottom: 0;
     }
 
     .footer-inner {
@@ -222,13 +224,10 @@
 
   <script>
     const footer = document.getElementById("footer");
-
     window.addEventListener("scroll", () => {
       const scrollable =
         document.documentElement.scrollHeight - window.innerHeight;
       const scrolled = window.scrollY;
-
-      // səhifə sonuna 100px qalmış görünür
       if (scrolled >= scrollable - 100) {
         footer.classList.add("show");
       } else {
