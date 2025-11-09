@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nino Özbetelaşvili</title>
 
-  <!-- Font Awesome (ikonlar) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
   <style>
@@ -26,13 +25,14 @@
       font-family: "Segoe UI", Arial, sans-serif;
       min-height: 200vh;
       color: #fff;
+      background: linear-gradient(to bottom, var(--bg-top), var(--bg-bottom));
       display: flex;
       flex-direction: column;
     }
 
     /* HEADER */
     header {
-      background: transparent;
+      background: linear-gradient(to bottom, var(--bg-top), #176da8);
       position: relative;
       z-index: 10;
       padding: 15px 0;
@@ -54,9 +54,10 @@
       gap: 15px;
     }
 
+    /* LOGO */
     .brand img {
-      width: 60px;
-      height: 60px;
+      width: 75px;   /* logo bir az böyüdülüb */
+      height: 75px;
       border-radius: 12px;
       object-fit: cover;
     }
@@ -102,69 +103,22 @@
       color: #ffffff;
     }
 
-    /* HERO SECTION */
-    .hero {
+    /* MAIN */
+    main {
       flex: 1;
-      background: url('assets/images/anasəhifə.jpg') no-repeat center center/cover;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
       align-items: center;
-      text-align: center;
-      padding: 120px 20px;
-      position: relative;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.4);
-      z-index: 0;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 1;
-      max-width: 800px;
-    }
-
-    .hero h2 {
-      font-size: 36px;
-      color: var(--brand-yellow);
-      text-shadow: 0 2px 8px rgba(0,0,0,0.5);
-      margin-bottom: 15px;
-    }
-
-    .hero p {
-      font-size: 18px;
-      color: #fff;
-      text-shadow: 0 2px 6px rgba(0,0,0,0.6);
-      margin-bottom: 25px;
-    }
-
-    .buttons {
-      display: flex;
       justify-content: center;
-      gap: 20px;
+      padding: 80px 16px;
     }
 
-    .buttons a {
-      background: var(--brand-yellow);
-      color: #0f4a70;
-      padding: 10px 20px;
-      border-radius: 8px;
+    .badge {
+      background: rgba(255, 255, 255, 0.35);
+      color: #0b2745;
+      padding: 14px 22px;
+      border-radius: 10px;
       font-weight: 700;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-
-    .buttons a:hover {
-      background: #fff;
-      color: #0f4a70;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12) inset;
     }
 
     /* FOOTER */
@@ -216,9 +170,14 @@
     }
 
     @media (max-width: 700px) {
-      .hero h2 { font-size: 28px; }
-      .hero p { font-size: 16px; }
-      .buttons { flex-direction: column; gap: 10px; }
+      nav ul {
+        gap: 16px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
 </head>
@@ -228,10 +187,10 @@
   <header>
     <div class="bar">
       <div class="brand">
-        <img src="ninologo.png" alt="Nino logo" />
+        <img src="assets/images/nino-logo.png" alt="Nino logo" />
         <div class="title">
           <h1>Nino Özbetelaşvili</h1>
-          <p>Beynəlxalq dərəcəli təlimçi və Art terapiya üzrə mütəxəssis</p>
+          <p>Beynəlxalq dərəcəli təlimçi və Art terapiya mütəxəssisi</p>
         </div>
       </div>
 
@@ -249,17 +208,9 @@
     </div>
   </header>
 
-  <!-- HERO SECTION -->
-  <main class="hero">
-    <div class="hero-content">
-      <h2>Nino Özbetelaşvili</h2>
-      <p>Beynəlxalq dərəcəli təlimçi və art terapiya üzrə mütəxəssis</p>
-      <p><em>“İncəsənət ruhun dilidir — onu anladıqca özünü kəşf edirsən.”</em></p>
-      <div class="buttons">
-        <a href="#">Haqqımda</a>
-        <a href="#">Əlaqə</a>
-      </div>
-    </div>
+  <!-- MAIN -->
+  <main>
+    <div class="badge">Rəsmi sayt hazırlanır...</div>
   </main>
 
   <!-- FOOTER -->
@@ -269,9 +220,9 @@
         © 2025 Nino Özbetelaşvili. Bütün hüquqlar qorunur.
       </div>
       <div class="social">
-        <a href="https://facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://facebook.com/yourprofile" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com/yourprofile" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
       </div>
     </div>
   </footer>
